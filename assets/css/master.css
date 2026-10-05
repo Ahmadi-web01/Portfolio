@@ -915,14 +915,6 @@
 /* ____End_Of_Contact____ */
 
 
-
-
-
-
-
-
-
-
 #menu {
     display: none;
 }
@@ -933,4 +925,863 @@
 
 .mobile-reserve {
     display: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE & TABLET
+   ========================================================= */
+
+
+/* =========================
+   TABLET
+   769px تا 1024px
+   ========================= */
+
+@media (max-width: 1024px) {
+
+    #Head_Hero > nav > div {
+        width: 92%;
+        margin-left: 4%;
+    }
+
+    #Head_Hero > nav > div > ul > li > a {
+        margin-inline: 8px;
+        font-size: 10px;
+    }
+
+    #Head_Hero > section {
+        width: 92%;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    #Head_Hero > section > main {
+        width: 52%;
+    }
+
+    #Head_Hero > section > main > div > h1 {
+        font-size: clamp(60px, 8vw, 85px);
+        line-height: .95;
+    }
+
+    #Head_Hero > section > figure {
+        width: 43%;
+    }
+
+    #Education > div,
+    #Skills > div,
+    #Certificates > div,
+    #Projects > div,
+    #Next_Chapter > div {
+        width: 92%;
+    }
+
+    #Skills .cards {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        height: auto;
+    }
+
+    #Certificates .grid_ceftificates {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    #Projects .my_work {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        height: auto;
+    }
+
+    #Next_Chapter > div {
+        height: auto;
+        gap: 40px;
+    }
+
+    #Next_Chapter > div .language,
+    #Next_Chapter > div .my_improvment {
+        width: 48%;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   تا 768px
+   ========================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- GLOBAL ---------- */
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* =====================================================
+       NAVBAR
+       ===================================================== */
+
+    #Head_Hero > nav {
+        width: 100%;
+        height: 65px;
+        left: 0;
+        right: 0;
+        top: 0;
+        padding: 0;
+    }
+
+    #Head_Hero > nav > div {
+        width: 92%;
+        height: 65px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* LOGO */
+
+    #Head_Hero > nav > div > a:nth-of-type(1) {
+        font-size: 21px;
+    }
+
+    /* CONTACT اصلی مخفی */
+
+    #Head_Hero > nav > div > a:nth-of-type(2) {
+        display: none;
+    }
+
+    /* HAMBURGER */
+
+    #Head_Hero > nav > div > .hamburger {
+        display: flex !important;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 42px;
+        height: 42px;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-size: 25px;
+        line-height: 1;
+        cursor: pointer;
+        z-index: 3000;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background-color: rgba(17, 20, 27, .9);
+    }
+
+    /* MENU */
+
+    #Head_Hero > nav > div > ul {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 8px 0;
+        flex-direction: column;
+        background-color: rgba(7, 8, 11, .98);
+        border: 1px solid var(--border);
+        border-radius: 0 0 12px 12px;
+        z-index: 2500;
+    }
+
+    #menu:checked ~ ul {
+        display: flex !important;
+    }
+
+    #Head_Hero > nav > div > ul > li {
+        width: 100%;
+    }
+
+    #Head_Hero > nav > div > ul > li > a {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 14px 10px;
+        text-align: center;
+        font-size: 11px;
+    }
+
+    /* CONTACT داخل MENU */
+
+    .mobile-contact {
+        display: block !important;
+        width: 100%;
+    }
+
+    .mobile-contact > a {
+        display: block !important;
+        width: 100%;
+        color: var(--purple-light) !important;
+        font-weight: 600;
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    #Head_Hero {
+        width: 100%;
+        min-height: auto;
+        height: auto;
+        display: block;
+        padding-top: 65px;
+    }
+
+    #Head_Hero > section {
+        width: 92%;
+        height: auto;
+        margin: 0 auto;
+        padding: 45px 0 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    #Head_Hero > section > * {
+        margin-top: 0;
+    }
+
+    #Head_Hero > section > main {
+        width: 100%;
+        height: auto;
+    }
+
+    #Head_Hero > section > main > div {
+        width: 100%;
+        height: auto;
+    }
+
+    #Head_Hero > section > main > div > h1 {
+        font-size: clamp(48px, 14vw, 80px);
+        line-height: .95;
+        margin-block: 25px;
+    }
+
+    #Head_Hero > section > main > div > p {
+        font-size: 13px;
+        line-height: 24px;
+    }
+
+    #Head_Hero > section > main > div > div:not(.details) {
+        height: auto;
+        margin-block: 30px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #Head_Hero > section > main > div > div:not(.details) > a {
+        margin-left: 0 !important;
+    }
+
+    #Head_Hero > section > main > div .details {
+        height: auto;
+        min-height: 90px;
+        margin-top: 25px;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    /* عکس هدر */
+
+    #Head_Hero > section > figure {
+        width: 100%;
+        height: 420px;
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #Head_Hero > section > figure > img {
+        width: 75%;
+        height: 100%;
+    }
+
+    /* متن روی عکس داخل چهارچوب */
+
+    #Head_Hero > section > figure > div {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        width: auto;
+        max-width: calc(100% - 20px);
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    #Head_Hero > section > figure > div * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       ABOUT
+       ===================================================== */
+
+    #About_Me {
+        min-height: auto;
+        height: auto;
+    }
+
+    #About_Me > .skills {
+        width: 100%;
+        height: 50px;
+        overflow: hidden;
+    }
+
+    #About_Me > .skills > div {
+        width: 92%;
+        white-space: nowrap;
+        overflow: hidden;
+        gap: 12px;
+    }
+
+    #About_Me > section {
+        width: 92%;
+        height: auto;
+        margin: 0 auto;
+        padding: 70px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    #About_Me > section > .Who_I_AM {
+        width: 100%;
+    }
+
+    #About_Me > section > .Who_I_AM > h2 {
+        margin-top: 30px;
+        font-size: clamp(55px, 16vw, 80px);
+        line-height: .9;
+    }
+
+    #About_Me > section > div:nth-child(2) {
+        width: 100%;
+    }
+
+    #About_Me > section > div:nth-child(2) > h3 {
+        margin-top: 0;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    #About_Me > section > div:nth-child(2) > p {
+        line-height: 24px;
+    }
+
+
+    /* =====================================================
+       EDUCATION
+       ===================================================== */
+
+    #Education {
+        min-height: auto;
+        height: auto;
+        padding: 80px 0;
+        display: block;
+    }
+
+    #Education > div {
+        width: 92%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #Education > div > section {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        margin-top: 40px;
+        padding: 35px 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    #Education > div > section .SECONDARY {
+        width: 100%;
+        height: auto;
+    }
+
+    #Education > div > section .SECONDARY > h3 {
+        font-size: 34px;
+    }
+
+    #Education > div > section .number {
+        align-self: flex-end;
+    }
+
+    #Education > div > section .number > span {
+        font-size: 55px;
+    }
+
+
+    /* =====================================================
+       SKILLS
+       ===================================================== */
+
+    #Skills {
+        min-height: auto;
+        height: auto;
+        padding: 80px 0;
+        display: block;
+    }
+
+    #Skills > div {
+        width: 92%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #Skills > div .What_I_Know {
+        width: 100%;
+        height: auto;
+        margin-block: 35px 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    #Skills > div .What_I_Know > h2 {
+        font-size: clamp(55px, 15vw, 80px);
+        line-height: .9;
+    }
+
+    #Skills > div .What_I_Know > p {
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    #Skills > div .cards {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: 15px;
+    }
+
+    #Skills > div .cards > div {
+        width: 100%;
+        min-height: 300px;
+        height: auto;
+    }
+
+    #Skills > div .cards > div > div {
+        margin-top: 45px;
+    }
+
+
+    /* =====================================================
+       CERTIFICATES
+       ===================================================== */
+
+    #Certificates {
+        min-height: auto;
+        height: auto;
+        padding: 80px 0;
+        display: block;
+    }
+
+    #Certificates > div {
+        width: 92%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #Certificates > div .Proof_Of_Progress {
+        width: 100%;
+        height: auto;
+        margin-block: 35px 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    #Certificates > div .Proof_Of_Progress > h2 {
+        font-size: clamp(50px, 14vw, 80px);
+        line-height: .9;
+    }
+
+    #Certificates > div .Proof_Of_Progress > p {
+        margin-right: 0;
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    #Certificates > div .grid_ceftificates {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: 20px;
+    }
+
+    #Certificates > div .grid_ceftificates > div {
+        width: 100%;
+        height: 400px;
+    }
+
+    /* متن دیپلوم بالاتر */
+
+    #Certificates > div .grid_ceftificates > div > figure {
+        height: 62%;
+    }
+
+
+    /* =====================================================
+       PROJECTS
+       ===================================================== */
+
+    #Projects {
+        min-height: auto;
+        height: auto;
+        padding: 80px 0;
+        display: block;
+    }
+
+    #Projects > div {
+        width: 92%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #Projects > div .Things_I_Build {
+        width: 100%;
+        height: auto;
+        margin-block: 35px 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    #Projects > div .Things_I_Build > h2 {
+        font-size: clamp(50px, 14vw, 80px);
+        line-height: .9;
+    }
+
+    #Projects > div .Things_I_Build > p {
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    #Projects > div .my_work {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: 20px;
+    }
+
+    #Projects > div .my_work > figure {
+        width: 100%;
+        height: 400px;
+        margin: 0;
+    }
+
+
+    /* =====================================================
+       MORE INFO
+       ===================================================== */
+
+    #Next_Chapter {
+        min-height: auto;
+        height: auto;
+        padding: 80px 0;
+        display: block;
+    }
+
+    #Next_Chapter > div {
+        width: 92%;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    #Next_Chapter > div .language,
+    #Next_Chapter > div .my_improvment {
+        width: 100%;
+        height: auto;
+    }
+
+    #Next_Chapter > div .language > h2,
+    #Next_Chapter > div .my_improvment > h2 {
+        font-size: clamp(45px, 13vw, 60px);
+        line-height: 1;
+    }
+
+    #Next_Chapter > div .language > div {
+        width: 100%;
+        height: auto;
+        margin-top: 35px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    #Next_Chapter > div .language > div > div {
+        width: 100%;
+        height: 160px;
+    }
+
+
+    /* =====================================================
+       CONTACT
+       ===================================================== */
+
+    #Contact {
+        min-height: auto;
+        height: auto;
+        display: block;
+    }
+
+    #Contact > div {
+        width: 100%;
+        height: auto;
+    }
+
+    #Contact > div .links {
+        width: 92%;
+        height: auto;
+        margin: 0 auto;
+        padding: 80px 0;
+    }
+
+    #Contact > div .links > h2 {
+        font-size: clamp(48px, 14vw, 70px);
+        line-height: .95;
+        margin-block: 30px;
+    }
+
+    #Contact > div .links > p {
+        font-size: 12px;
+        line-height: 22px;
+        margin-bottom: 35px;
+    }
+
+    #Contact > div .links > p br {
+        display: none;
+    }
+
+    #Contact > div .links > div {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    #Contact > div .links > div > div {
+        width: 100%;
+        height: 75px;
+    }
+
+    #Contact > div .links > div > div > a {
+        width: 100%;
+        height: 75px;
+        padding: 14px;
+    }
+
+    #Contact > div .footer {
+        width: 100%;
+        height: auto;
+        min-height: 60px;
+        padding: 10px 0;
+    }
+
+    #Contact > div .footer > div {
+        width: 92%;
+        height: auto;
+        min-height: 60px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   تا 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    #Head_Hero > nav > div {
+        width: 94%;
+    }
+
+    #Head_Hero > section,
+    #About_Me > section,
+    #Education > div,
+    #Skills > div,
+    #Certificates > div,
+    #Projects > div,
+    #Next_Chapter > div {
+        width: 94%;
+    }
+
+    #Head_Hero > section > figure {
+        height: 360px;
+    }
+
+    #Head_Hero > section > figure > img {
+        width: 78%;
+    }
+
+    #Head_Hero > section > figure > div {
+        width: auto;
+        max-width: calc(100% - 20px);
+    }
+
+    #Head_Hero > section > main > div .details {
+        gap: 18px;
+    }
+
+    #Education > div > section {
+        padding: 30px 20px;
+    }
+
+    #Skills > div .cards > div {
+        min-height: 290px;
+    }
+
+    #Certificates > div .grid_ceftificates > div {
+        height: 360px;
+    }
+
+    #Projects > div .my_work > figure {
+        height: 350px;
+    }
+
+    #Next_Chapter > div .language > div {
+        grid-template-columns: 1fr;
+    }
+
+    #Next_Chapter > div .language > div > div {
+        width: 100%;
+    }
+
+    #Contact > div .links {
+        width: 94%;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   تا 360px
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    #Head_Hero > nav > div {
+        width: 94%;
+    }
+
+    #Head_Hero > section,
+    #About_Me > section,
+    #Education > div,
+    #Skills > div,
+    #Certificates > div,
+    #Projects > div,
+    #Next_Chapter > div {
+        width: 94%;
+    }
+
+    #Head_Hero > section > main > div > h1 {
+        font-size: 45px;
+    }
+
+    #Head_Hero > section > figure {
+        height: 320px;
+    }
+
+    #Head_Hero > section > figure > div {
+        width: auto;
+        max-width: calc(100% - 20px);
+    }
+
+    #Head_Hero > section > main > div .details {
+        gap: 12px;
+    }
+
+    #Head_Hero > section > main > div .details > div > span {
+        font-size: 20px;
+    }
+
+    #Certificates > div .grid_ceftificates > div {
+        height: 340px;
+    }
+
+    #Projects > div .my_work > figure {
+        height: 330px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE CONTACT داخل HAMBURGER
+   ========================================================= */
+
+.mobile-contact {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .mobile-contact {
+        display: block !important;
+        width: 100%;
+    }
+
+    .mobile-contact > a {
+        display: block !important;
+        width: 100%;
+        color: var(--purple-light) !important;
+        font-weight: 600;
+    }
+
+    #Head_Hero > nav > div > ul {
+        flex-direction: column;
+    }
+
+    #menu:checked ~ ul {
+        display: flex !important;
+    }
 }
