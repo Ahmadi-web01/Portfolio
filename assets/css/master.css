@@ -571,7 +571,7 @@
                         >h4{
                             color: var(--white);
                             font-weight: 500;
-                            margin-block: 10px;
+                            margin-block: 12px;
                         }
                         >p{
                             color: var(--muted);
