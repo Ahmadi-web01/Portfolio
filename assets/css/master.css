@@ -1689,7 +1689,7 @@
         height: 360px;
     }
 
-    #Projects > div .my_work > figure {
+    #Projects > div .my_work > figure > {
         height: 350px;
     }
 
